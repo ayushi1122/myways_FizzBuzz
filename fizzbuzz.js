@@ -1,17 +1,29 @@
-function fizzBuzz(num){
-    if(num %3 ===0 && num %4 ===0){
-        console.log("FizzBuzz");
+function SumofPhNo(number){
+    let sum=0;
+    while(number){
+        sum+=number%10;
+        num= Math.floor(number/10);
     }
-    else if(num%3 ===0){
-        console.log("Fizz");
-    }
-    else if(num%4===0){
-        console.log("Buzz");
-    }
-    else{
-        console.log(num);
-    }
+    return sum;
 }
-
-const Sum= 9997686315;
+    
+function fizzBuzz(phsum){
+    //const phsum= SumofPhNo(phnumber);
+    for(let i=1; i<=phsum; i++){
+        if(i %3 ===0 && i %4 ===0){
+            console.log("FizzBuzz");
+        }
+        else if(i%3 ===0){
+            console.log("Fizz");
+        }
+        else if(i%4===0){
+            console.log("Buzz");
+        }
+        else{
+            console.log(i);
+        }
+    } 
+}
+const phnumber= "9997686315";
+const Sum= SumofPhNo(phnumber);
 fizzBuzz(Sum);
